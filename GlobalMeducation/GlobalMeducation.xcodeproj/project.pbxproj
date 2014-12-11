@@ -25,6 +25,7 @@
 		6C64C0E81A3A3971002B059C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0E71A3A3971002B059C /* Accelerate.framework */; };
 		6C64C0EA1A3A39A3002B059C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0E91A3A39A3002B059C /* CoreGraphics.framework */; };
 		6C64C0EC1A3A39C7002B059C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0EB1A3A39C7002B059C /* Foundation.framework */; };
+		6C64C0EF1A3A3EF2002B059C /* VideoAnalgesic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		6C64C0E71A3A3971002B059C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		6C64C0E91A3A39A3002B059C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6C64C0EB1A3A39C7002B059C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6C64C0ED1A3A3EF2002B059C /* VideoAnalgesic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAnalgesic.h; sourceTree = "<group>"; };
+		6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoAnalgesic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 		387F194A1A37929500F1014A /* GlobalMeducation */ = {
 			isa = PBXGroup;
 			children = (
+				6C64C0ED1A3A3EF2002B059C /* VideoAnalgesic.h */,
+				6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */,
 				387F194F1A37929500F1014A /* AppDelegate.h */,
 				387F19501A37929500F1014A /* AppDelegate.m */,
 				387F19521A37929500F1014A /* ViewController.h */,
@@ -264,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				387F19541A37929500F1014A /* ViewController.m in Sources */,
+				6C64C0EF1A3A3EF2002B059C /* VideoAnalgesic.m in Sources */,
 				387F19511A37929500F1014A /* AppDelegate.m in Sources */,
 				387F194E1A37929500F1014A /* main.m in Sources */,
 			);

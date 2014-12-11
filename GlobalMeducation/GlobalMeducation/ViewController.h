@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "VideoAnalgesic.h"
+#import <CoreImage/CoreImage.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <QuartzCore/QuartzCore.h>
 @interface ViewController : UIViewController
 
-
+@property (strong, nonatomic) VideoAnalgesic *videoManager;
+@property (strong, nonatomic) CIVector *center;
 @end
 

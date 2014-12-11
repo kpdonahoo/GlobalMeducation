@@ -14,6 +14,7 @@
 		387F19591A37929500F1014A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387F19581A37929500F1014A /* Images.xcassets */; };
 		387F195C1A37929500F1014A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F195A1A37929500F1014A /* LaunchScreen.xib */; };
 		387F19681A37929500F1014A /* GlobalMeducationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F19671A37929500F1014A /* GlobalMeducationTests.m */; };
+		6C64C0D81A3A3087002B059C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0D71A3A3087002B059C /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		387F19611A37929500F1014A /* GlobalMeducationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobalMeducationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		387F19661A37929500F1014A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387F19671A37929500F1014A /* GlobalMeducationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalMeducationTests.m; sourceTree = "<group>"; };
+		6C64C0D71A3A3087002B059C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C64C0D81A3A3087002B059C /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		387F193F1A37929500F1014A = {
 			isa = PBXGroup;
 			children = (
+				6C64C0D71A3A3087002B059C /* opencv2.framework */,
 				387F194A1A37929500F1014A /* GlobalMeducation */,
 				387F19641A37929500F1014A /* GlobalMeducationTests */,
 				387F19491A37929500F1014A /* Products */,
@@ -345,6 +349,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +363,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +426,7 @@
 				387F196D1A37929500F1014A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		387F196E1A37929500F1014A /* Build configuration list for PBXNativeTarget "GlobalMeducationTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +435,7 @@
 				387F19701A37929500F1014A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

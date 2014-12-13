@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) VideoAnalgesic *videoManager;
 @property (strong, nonatomic) CIVector *center;
+
 @end
 

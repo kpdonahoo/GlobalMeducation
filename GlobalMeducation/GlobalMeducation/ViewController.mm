@@ -35,9 +35,9 @@ float radius;
     self.center = [CIVector vectorWithX:self.view.bounds.size.height/2.0 - radius/2.0 Y:self.view.bounds.size.width/2.0+radius/2.0];
     
     
-    __block CIFilter *filter = [CIFilter filterWithName:@"CICircleSplashDistortion"];
-    __block CIFilter *eyeFilter = [CIFilter filterWithName:@"CIBumpDistortion"];
-    __block CIFilter *mouthFilter = [CIFilter filterWithName:@"CIPinchDistortion"];
+//    __block CIFilter *filter = [CIFilter filterWithName:@"CICircleSplashDistortion"];
+//    __block CIFilter *eyeFilter = [CIFilter filterWithName:@"CIBumpDistortion"];
+//    __block CIFilter *mouthFilter = [CIFilter filterWithName:@"CIPinchDistortion"];
     
     
     
@@ -59,37 +59,42 @@ float radius;
             float yy = face.bounds.origin.y + face.bounds.size.width/2;
             
             
-            [filter setValue:@(yy) forKey:@"inputRadius"];
+//            [filter setValue:@(yy) forKey:@"inputRadius"];
             
             if (face.hasLeftEyePosition)
             {
                 CIVector *leftVect = [CIVector vectorWithX:face.leftEyePosition.x Y:face.leftEyePosition.y];
-                [eyeFilter setValue:leftVect forKey:@"inputCenter"];
-                [eyeFilter setValue:cameraImage forKey:kCIInputImageKey];
-                cameraImage = eyeFilter.outputImage;
+                NSLog(@"Left Eye, %f,%f",face.leftEyePosition.x,face.leftEyePosition.y);
+//                [eyeFilter setValue:leftVect forKey:@"inputCenter"];
+//                [eyeFilter setValue:cameraImage forKey:kCIInputImageKey];
+//                cameraImage = eyeFilter.outputImage;
             }
             
             if (face.hasRightEyePosition)
             {
                 CIVector *rightVect = [CIVector vectorWithX:face.rightEyePosition.x Y:face.rightEyePosition.y];
-                [eyeFilter setValue:rightVect forKey:@"inputCenter"];
-                [eyeFilter setValue:cameraImage forKey:kCIInputImageKey];
-                cameraImage = eyeFilter.outputImage;
+                NSLog(@"Right Eye, %f,%f",face.rightEyePosition.x,face.rightEyePosition.y);
+//                [eyeFilter setValue:rightVect forKey:@"inputCenter"];
+//                [eyeFilter setValue:cameraImage forKey:kCIInputImageKey];
+//                cameraImage = eyeFilter.outputImage;
             }
             
             if (face.hasMouthPosition)
             {
                 CIVector *mouthVect = [CIVector vectorWithX:face.mouthPosition.x Y:face.mouthPosition.y];
-                [mouthFilter setValue:mouthVect forKey:@"inputCenter"];
-                [mouthFilter setValue:cameraImage forKey:kCIInputImageKey];
-                cameraImage = mouthFilter.outputImage;
+                NSLog(@"Mouth, %f, %f", face.mouthPosition.x, face.mouthPosition.y);
+//                [mouthFilter setValue:mouthVect forKey:@"inputCenter"];
+//                [mouthFilter setValue:cameraImage forKey:kCIInputImageKey];
+//                cameraImage = mouthFilter.outputImage;
+                
+    
             }
             
             CIVector *vect = [CIVector vectorWithX:xx Y:yy];
             
-            [filter setValue:vect forKey:@"inputCenter"];
-            [filter setValue:cameraImage forKey:kCIInputImageKey];
-            cameraImage = filter.outputImage;
+//            [filter setValue:vect forKey:@"inputCenter"];
+//            [filter setValue:cameraImage forKey:kCIInputImageKey];
+//            cameraImage = filter.outputImage;
             
             
             

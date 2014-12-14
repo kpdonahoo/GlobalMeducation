@@ -15,6 +15,7 @@ using namespace cv;
 
 @interface CVViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView2;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (nonatomic, retain) CvVideoCamera *videoCamera;
 @end
@@ -23,6 +24,7 @@ using namespace cv;
 @synthesize videoCamera;
 @synthesize imageView;
 @synthesize startButton;
+@synthesize imageView2;
 vector<cv::Rect> objects;
 
 - (void)viewDidLoad {
@@ -34,33 +36,72 @@ vector<cv::Rect> objects;
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
     self.videoCamera.grayscaleMode = NO;
+
 }
 
 -(void)processImage:(Mat&)image {
     Mat image_copy;
-    //cvtColor(image, image_copy,CV_BGRA2BGR);
-    //bitwise_not(image_copy, image_copy);
+    Mat tiny_image;
     
     CascadeClassifier classifier;
+    CascadeClassifier classifier2;
     
     pyrDown(image, image_copy);
     
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt2" ofType:@"xml"];
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"haarcascade_lefteye_2splits" ofType:@"xml"];
+    
     classifier = cv::CascadeClassifier([fileName UTF8String]);
+    
     cvtColor(image, image_copy, CV_BGRA2GRAY);
     
     classifier.detectMultiScale(image_copy, objects);
     
     // display bounding rectangles around the detected objects
     for( vector<cv::Rect>::const_iterator r = objects.begin(); r != objects.end(); r++) {
-    
-        NSLog(@"I see a face");
         
-        /*    cv::rectangle(image, cvPoint( r->x, r->y ), cvPoint( r->x + r->width, r->y + r->height ), Scalar(0,0,255,255));*/
+           cv::rectangle(image, cvPoint( r->x - r->width/2, r->y - r->height/2), cvPoint( r->x + r->width, r->y +r->height/2 ), Scalar(0,0,255,255));
+        
+        IplImage img = (IplImage)tiny_image;
+        
+        cvRect roi = CGRectMake(r->x - r->width/2, r->y - r->height/2, r->x + r->width, r->y + r->height/2);
+        //tiny_image = image(r);
+        
+        cvSetImageROI(img,)
+        
+//        CGRect aRect = image[
+        //UIImage *roi_image = [self captureScreenInRect:aRect];
+        
+//        imageView.image = roi_image;
+        
+        NSLog(@"x: %d y: %d",r->x,r->y);
+        
+        //UIImage *roi_color =
+        //frame[y:y+h, x:x+w]
+        
     }
-
+    
+    
+    //cvtColor(image, image_copy,CV_BGRA2BGR);
+    //bitwise_not(image_copy, image_copy);
     //cvtColor(image_copy, image, CV_BGR2BGRA);
+    
 }
+
+
+- (UIImage *)captureScreenInRect:(CGRect)captureFrame
+{
+    
+    CALayer *layer;
+    layer = self.view.layer;
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    CGContextClipToRect (UIGraphicsGetCurrentContext(),captureFrame);
+    [layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return screenImage;
+}
+
+
 
 - (IBAction)startPressed:(id)sender {
     [self.videoCamera start];

@@ -12,8 +12,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4H7-os-ISy">
+                                <rect key="frame" x="45" y="130" width="271" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hQL-Nh-wPX">
-                                <rect key="frame" x="361" y="486" width="47" height="30"/>
+                                <rect key="frame" x="157" y="453" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="START">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,8 +26,8 @@
                                     <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zSA-x3-3Of"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4H7-os-ISy">
-                                <rect key="frame" x="249" y="118" width="271" height="268"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wBT-m3-lAk">
+                                <rect key="frame" x="45" y="529" width="271" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -31,6 +35,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="4H7-os-ISy" id="z1X-UK-TtR"/>
+                        <outlet property="imageView2" destination="wBT-m3-lAk" id="ZKn-cN-QD9"/>
                         <outlet property="startButton" destination="hQL-Nh-wPX" id="IfQ-x0-Lq4"/>
                     </connections>
                 </viewController>

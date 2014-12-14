@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370AF54D1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = 370AF54C1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml */; };
+		370AF54F1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 370AF54E1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml */; };
+		370AF5511A3D6827005031DD /* haarcascade_righteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 370AF5501A3D6827005031DD /* haarcascade_righteye_2splits.xml */; };
 		37A2B5D71A3CF62700CFAFA4 /* CVViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B5D61A3CF62700CFAFA4 /* CVViewController.mm */; };
 		37A2B5D91A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B5D81A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml */; };
 		37A2B5DB1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B5DA1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml */; };
@@ -29,7 +32,6 @@
 		6C64C0EA1A3A39A3002B059C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0E91A3A39A3002B059C /* CoreGraphics.framework */; };
 		6C64C0EC1A3A39C7002B059C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0EB1A3A39C7002B059C /* Foundation.framework */; };
 		6C64C0EF1A3A3EF2002B059C /* VideoAnalgesic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */; };
-		6CC1ADC11A3CF10700424491 /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6CC1ADBF1A3CF10700424491 /* haarcascade_eye_tree_eyeglasses.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370AF54C1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		370AF54E1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lefteye_2splits.xml; sourceTree = "<group>"; };
+		370AF5501A3D6827005031DD /* haarcascade_righteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_righteye_2splits.xml; sourceTree = "<group>"; };
 		37A2B5D51A3CF62700CFAFA4 /* CVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVViewController.h; sourceTree = "<group>"; };
 		37A2B5D61A3CF62700CFAFA4 /* CVViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVViewController.mm; sourceTree = "<group>"; };
 		37A2B5D81A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
@@ -73,7 +78,6 @@
 		6C64C0EB1A3A39C7002B059C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6C64C0ED1A3A3EF2002B059C /* VideoAnalgesic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAnalgesic.h; sourceTree = "<group>"; };
 		6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoAnalgesic.m; sourceTree = "<group>"; };
-		6CC1ADBF1A3CF10700424491 /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +160,10 @@
 		387F194B1A37929500F1014A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6CC1ADBF1A3CF10700424491 /* haarcascade_eye_tree_eyeglasses.xml */,
+				370AF54E1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml */,
+				370AF5501A3D6827005031DD /* haarcascade_righteye_2splits.xml */,
 				37A2B5DA1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml */,
+				370AF54C1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml */,
 				37A2B5D81A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml */,
 				387F194C1A37929500F1014A /* Info.plist */,
 				387F194D1A37929500F1014A /* main.m */,
@@ -267,7 +273,9 @@
 				387F195C1A37929500F1014A /* LaunchScreen.xib in Resources */,
 				37A2B5D91A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml in Resources */,
 				387F19591A37929500F1014A /* Images.xcassets in Resources */,
-				6CC1ADC11A3CF10700424491 /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
+				370AF54F1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml in Resources */,
+				370AF5511A3D6827005031DD /* haarcascade_righteye_2splits.xml in Resources */,
+				370AF54D1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +428,7 @@
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -434,6 +443,7 @@
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

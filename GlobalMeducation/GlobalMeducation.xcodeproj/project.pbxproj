@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370AF54D1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = 370AF54C1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml */; };
-		370AF54F1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 370AF54E1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml */; };
-		370AF5511A3D6827005031DD /* haarcascade_righteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 370AF5501A3D6827005031DD /* haarcascade_righteye_2splits.xml */; };
-		37A2B5D71A3CF62700CFAFA4 /* CVViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B5D61A3CF62700CFAFA4 /* CVViewController.mm */; };
-		37A2B5D91A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B5D81A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml */; };
-		37A2B5DB1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B5DA1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml */; };
+		37B052381A3E2F4100938E17 /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B052371A3E2F4100938E17 /* LandingPageViewController.m */; };
+		37B0523A1A3E536800938E17 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B052391A3E536800938E17 /* MediaPlayer.framework */; };
+		37B0523E1A3E6DB700938E17 /* Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 37B0523D1A3E6CE200938E17 /* Intro.mp4 */; };
+		37B052421A3E784F00938E17 /* postVideo.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B052411A3E784F00938E17 /* postVideo.png */; };
+		37B052461A3E7B3400938E17 /* mazebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B052451A3E7B3400938E17 /* mazebutton.png */; };
+		37B052481A3E8C4E00938E17 /* MazeTransition.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 37B052471A3E8BD100938E17 /* MazeTransition.mp4 */; };
+		37B0524B1A3E8CD500938E17 /* MazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0524A1A3E8CD500938E17 /* MazeViewController.m */; };
+		37B0524D1A3E8FCF00938E17 /* mazeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B0524C1A3E8FCF00938E17 /* mazeBackground.png */; };
+		37B0524F1A3E94A100938E17 /* mazeComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B0524E1A3E94A100938E17 /* mazeComplete.png */; };
+		37B052531A3E96C600938E17 /* continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B052521A3E96C600938E17 /* continue.png */; };
+		37B052561A3E9ABA00938E17 /* ISpyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B052551A3E9ABA00938E17 /* ISpyViewController.m */; };
+		37B052581A3E9C1400938E17 /* ISpyTransition.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 37B052571A3E9C0800938E17 /* ISpyTransition.mp4 */; };
 		387F194E1A37929500F1014A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F194D1A37929500F1014A /* main.m */; };
 		387F19511A37929500F1014A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F19501A37929500F1014A /* AppDelegate.m */; };
-		387F19541A37929500F1014A /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 387F19531A37929500F1014A /* ViewController.mm */; };
 		387F19571A37929500F1014A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387F19551A37929500F1014A /* Main.storyboard */; };
 		387F19591A37929500F1014A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387F19581A37929500F1014A /* Images.xcassets */; };
 		387F195C1A37929500F1014A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387F195A1A37929500F1014A /* LaunchScreen.xib */; };
 		387F19681A37929500F1014A /* GlobalMeducationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F19671A37929500F1014A /* GlobalMeducationTests.m */; };
-		6C64C0D81A3A3087002B059C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0D71A3A3087002B059C /* opencv2.framework */; };
 		6C64C0DA1A3A3699002B059C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0D91A3A3699002B059C /* QuartzCore.framework */; };
 		6C64C0DC1A3A36A2002B059C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0DB1A3A36A2002B059C /* CoreImage.framework */; };
 		6C64C0DE1A3A36AE002B059C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0DD1A3A36AE002B059C /* AVFoundation.framework */; };
@@ -31,7 +35,6 @@
 		6C64C0E81A3A3971002B059C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0E71A3A3971002B059C /* Accelerate.framework */; };
 		6C64C0EA1A3A39A3002B059C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0E91A3A39A3002B059C /* CoreGraphics.framework */; };
 		6C64C0EC1A3A39C7002B059C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C0EB1A3A39C7002B059C /* Foundation.framework */; };
-		6C64C0EF1A3A3EF2002B059C /* VideoAnalgesic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,27 +48,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		370AF54C1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
-		370AF54E1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lefteye_2splits.xml; sourceTree = "<group>"; };
-		370AF5501A3D6827005031DD /* haarcascade_righteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_righteye_2splits.xml; sourceTree = "<group>"; };
-		37A2B5D51A3CF62700CFAFA4 /* CVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVViewController.h; sourceTree = "<group>"; };
-		37A2B5D61A3CF62700CFAFA4 /* CVViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVViewController.mm; sourceTree = "<group>"; };
-		37A2B5D81A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
-		37A2B5DA1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt_tree.xml; sourceTree = "<group>"; };
+		37B052361A3E2F4100938E17 /* LandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPageViewController.h; sourceTree = "<group>"; };
+		37B052371A3E2F4100938E17 /* LandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingPageViewController.m; sourceTree = "<group>"; };
+		37B052391A3E536800938E17 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		37B0523D1A3E6CE200938E17 /* Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Intro.mp4; sourceTree = "<group>"; };
+		37B052411A3E784F00938E17 /* postVideo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postVideo.png; sourceTree = "<group>"; };
+		37B052451A3E7B3400938E17 /* mazebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mazebutton.png; sourceTree = "<group>"; };
+		37B052471A3E8BD100938E17 /* MazeTransition.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MazeTransition.mp4; sourceTree = "<group>"; };
+		37B052491A3E8CD500938E17 /* MazeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeViewController.h; sourceTree = "<group>"; };
+		37B0524A1A3E8CD500938E17 /* MazeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeViewController.m; sourceTree = "<group>"; };
+		37B0524C1A3E8FCF00938E17 /* mazeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mazeBackground.png; sourceTree = "<group>"; };
+		37B0524E1A3E94A100938E17 /* mazeComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mazeComplete.png; sourceTree = "<group>"; };
+		37B052521A3E96C600938E17 /* continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue.png; sourceTree = "<group>"; };
+		37B052541A3E9ABA00938E17 /* ISpyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISpyViewController.h; sourceTree = "<group>"; };
+		37B052551A3E9ABA00938E17 /* ISpyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISpyViewController.m; sourceTree = "<group>"; };
+		37B052571A3E9C0800938E17 /* ISpyTransition.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ISpyTransition.mp4; sourceTree = "<group>"; };
 		387F19481A37929500F1014A /* GlobalMeducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlobalMeducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387F194C1A37929500F1014A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387F194D1A37929500F1014A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		387F194F1A37929500F1014A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		387F19501A37929500F1014A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		387F19521A37929500F1014A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		387F19531A37929500F1014A /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		387F19561A37929500F1014A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		387F19581A37929500F1014A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		387F195B1A37929500F1014A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		387F19611A37929500F1014A /* GlobalMeducationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobalMeducationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		387F19661A37929500F1014A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387F19671A37929500F1014A /* GlobalMeducationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalMeducationTests.m; sourceTree = "<group>"; };
-		6C64C0D71A3A3087002B059C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		6C64C0D91A3A3699002B059C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6C64C0DB1A3A36A2002B059C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		6C64C0DD1A3A36AE002B059C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -76,8 +84,6 @@
 		6C64C0E71A3A3971002B059C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		6C64C0E91A3A39A3002B059C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6C64C0EB1A3A39C7002B059C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6C64C0ED1A3A3EF2002B059C /* VideoAnalgesic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAnalgesic.h; sourceTree = "<group>"; };
-		6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoAnalgesic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B0523A1A3E536800938E17 /* MediaPlayer.framework in Frameworks */,
 				6C64C0EC1A3A39C7002B059C /* Foundation.framework in Frameworks */,
 				6C64C0EA1A3A39A3002B059C /* CoreGraphics.framework in Frameworks */,
 				6C64C0E81A3A3971002B059C /* Accelerate.framework in Frameworks */,
@@ -95,7 +102,6 @@
 				6C64C0DE1A3A36AE002B059C /* AVFoundation.framework in Frameworks */,
 				6C64C0DC1A3A36A2002B059C /* CoreImage.framework in Frameworks */,
 				6C64C0DA1A3A3699002B059C /* QuartzCore.framework in Frameworks */,
-				6C64C0D81A3A3087002B059C /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +118,7 @@
 		387F193F1A37929500F1014A = {
 			isa = PBXGroup;
 			children = (
+				37B052391A3E536800938E17 /* MediaPlayer.framework */,
 				6C64C0EB1A3A39C7002B059C /* Foundation.framework */,
 				6C64C0E91A3A39A3002B059C /* CoreGraphics.framework */,
 				6C64C0E71A3A3971002B059C /* Accelerate.framework */,
@@ -122,7 +129,6 @@
 				6C64C0DD1A3A36AE002B059C /* AVFoundation.framework */,
 				6C64C0DB1A3A36A2002B059C /* CoreImage.framework */,
 				6C64C0D91A3A3699002B059C /* QuartzCore.framework */,
-				6C64C0D71A3A3087002B059C /* opencv2.framework */,
 				387F194A1A37929500F1014A /* GlobalMeducation */,
 				387F19641A37929500F1014A /* GlobalMeducationTests */,
 				387F19491A37929500F1014A /* Products */,
@@ -141,15 +147,23 @@
 		387F194A1A37929500F1014A /* GlobalMeducation */ = {
 			isa = PBXGroup;
 			children = (
-				6C64C0ED1A3A3EF2002B059C /* VideoAnalgesic.h */,
-				6C64C0EE1A3A3EF2002B059C /* VideoAnalgesic.m */,
 				387F194F1A37929500F1014A /* AppDelegate.h */,
+				37B052411A3E784F00938E17 /* postVideo.png */,
+				37B052451A3E7B3400938E17 /* mazebutton.png */,
+				37B052571A3E9C0800938E17 /* ISpyTransition.mp4 */,
+				37B0524E1A3E94A100938E17 /* mazeComplete.png */,
 				387F19501A37929500F1014A /* AppDelegate.m */,
-				387F19521A37929500F1014A /* ViewController.h */,
-				387F19531A37929500F1014A /* ViewController.mm */,
+				37B052471A3E8BD100938E17 /* MazeTransition.mp4 */,
+				37B052521A3E96C600938E17 /* continue.png */,
 				387F19551A37929500F1014A /* Main.storyboard */,
-				37A2B5D51A3CF62700CFAFA4 /* CVViewController.h */,
-				37A2B5D61A3CF62700CFAFA4 /* CVViewController.mm */,
+				37B052541A3E9ABA00938E17 /* ISpyViewController.h */,
+				37B052551A3E9ABA00938E17 /* ISpyViewController.m */,
+				37B052491A3E8CD500938E17 /* MazeViewController.h */,
+				37B0524C1A3E8FCF00938E17 /* mazeBackground.png */,
+				37B0524A1A3E8CD500938E17 /* MazeViewController.m */,
+				37B052361A3E2F4100938E17 /* LandingPageViewController.h */,
+				37B052371A3E2F4100938E17 /* LandingPageViewController.m */,
+				37B0523D1A3E6CE200938E17 /* Intro.mp4 */,
 				387F19581A37929500F1014A /* Images.xcassets */,
 				387F195A1A37929500F1014A /* LaunchScreen.xib */,
 				387F194B1A37929500F1014A /* Supporting Files */,
@@ -160,11 +174,6 @@
 		387F194B1A37929500F1014A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				370AF54E1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml */,
-				370AF5501A3D6827005031DD /* haarcascade_righteye_2splits.xml */,
-				37A2B5DA1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml */,
-				370AF54C1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml */,
-				37A2B5D81A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml */,
 				387F194C1A37929500F1014A /* Info.plist */,
 				387F194D1A37929500F1014A /* main.m */,
 			);
@@ -268,14 +277,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A2B5DB1A3D01DB00CFAFA4 /* haarcascade_frontalface_alt_tree.xml in Resources */,
+				37B0523E1A3E6DB700938E17 /* Intro.mp4 in Resources */,
+				37B052581A3E9C1400938E17 /* ISpyTransition.mp4 in Resources */,
+				37B052421A3E784F00938E17 /* postVideo.png in Resources */,
+				37B052531A3E96C600938E17 /* continue.png in Resources */,
+				37B0524D1A3E8FCF00938E17 /* mazeBackground.png in Resources */,
 				387F19571A37929500F1014A /* Main.storyboard in Resources */,
+				37B0524F1A3E94A100938E17 /* mazeComplete.png in Resources */,
+				37B052481A3E8C4E00938E17 /* MazeTransition.mp4 in Resources */,
 				387F195C1A37929500F1014A /* LaunchScreen.xib in Resources */,
-				37A2B5D91A3CFFC900CFAFA4 /* haarcascade_frontalface_alt2.xml in Resources */,
+				37B052461A3E7B3400938E17 /* mazebutton.png in Resources */,
 				387F19591A37929500F1014A /* Images.xcassets in Resources */,
-				370AF54F1A3D67C4005031DD /* haarcascade_lefteye_2splits.xml in Resources */,
-				370AF5511A3D6827005031DD /* haarcascade_righteye_2splits.xml in Resources */,
-				370AF54D1A3D62D9005031DD /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,11 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A2B5D71A3CF62700CFAFA4 /* CVViewController.mm in Sources */,
-				387F19541A37929500F1014A /* ViewController.mm in Sources */,
-				6C64C0EF1A3A3EF2002B059C /* VideoAnalgesic.m in Sources */,
 				387F19511A37929500F1014A /* AppDelegate.m in Sources */,
+				37B052381A3E2F4100938E17 /* LandingPageViewController.m in Sources */,
+				37B052561A3E9ABA00938E17 /* ISpyViewController.m in Sources */,
 				387F194E1A37929500F1014A /* main.m in Sources */,
+				37B0524B1A3E8CD500938E17 /* MazeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +440,7 @@
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -443,7 +455,7 @@
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

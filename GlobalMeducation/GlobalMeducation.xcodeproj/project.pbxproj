@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		377618EF1A3EA8EC003711CF /* emptyScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 377618EE1A3EA8EC003711CF /* emptyScroll.png */; };
+		377618F21A3EAA8E003711CF /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377618F11A3EAA8E003711CF /* StudyViewController.m */; };
 		37B052381A3E2F4100938E17 /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B052371A3E2F4100938E17 /* LandingPageViewController.m */; };
 		37B0523A1A3E536800938E17 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B052391A3E536800938E17 /* MediaPlayer.framework */; };
 		37B0523E1A3E6DB700938E17 /* Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 37B0523D1A3E6CE200938E17 /* Intro.mp4 */; };
@@ -17,8 +19,8 @@
 		37B0524D1A3E8FCF00938E17 /* mazeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B0524C1A3E8FCF00938E17 /* mazeBackground.png */; };
 		37B0524F1A3E94A100938E17 /* mazeComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B0524E1A3E94A100938E17 /* mazeComplete.png */; };
 		37B052531A3E96C600938E17 /* continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B052521A3E96C600938E17 /* continue.png */; };
-		37B052561A3E9ABA00938E17 /* ISpyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B052551A3E9ABA00938E17 /* ISpyViewController.m */; };
 		37B052581A3E9C1400938E17 /* ISpyTransition.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 37B052571A3E9C0800938E17 /* ISpyTransition.mp4 */; };
+		37B0525A1A3EA7A200938E17 /* ISpy.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B052591A3EA7A200938E17 /* ISpy.png */; };
 		387F194E1A37929500F1014A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F194D1A37929500F1014A /* main.m */; };
 		387F19511A37929500F1014A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F19501A37929500F1014A /* AppDelegate.m */; };
 		387F19571A37929500F1014A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387F19551A37929500F1014A /* Main.storyboard */; };
@@ -48,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		377618EE1A3EA8EC003711CF /* emptyScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyScroll.png; sourceTree = "<group>"; };
+		377618F01A3EAA8E003711CF /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyViewController.h; path = ../StudyViewController.h; sourceTree = "<group>"; };
+		377618F11A3EAA8E003711CF /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyViewController.m; path = ../StudyViewController.m; sourceTree = "<group>"; };
 		37B052361A3E2F4100938E17 /* LandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPageViewController.h; sourceTree = "<group>"; };
 		37B052371A3E2F4100938E17 /* LandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingPageViewController.m; sourceTree = "<group>"; };
 		37B052391A3E536800938E17 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -60,9 +65,8 @@
 		37B0524C1A3E8FCF00938E17 /* mazeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mazeBackground.png; sourceTree = "<group>"; };
 		37B0524E1A3E94A100938E17 /* mazeComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mazeComplete.png; sourceTree = "<group>"; };
 		37B052521A3E96C600938E17 /* continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue.png; sourceTree = "<group>"; };
-		37B052541A3E9ABA00938E17 /* ISpyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISpyViewController.h; sourceTree = "<group>"; };
-		37B052551A3E9ABA00938E17 /* ISpyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISpyViewController.m; sourceTree = "<group>"; };
 		37B052571A3E9C0800938E17 /* ISpyTransition.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ISpyTransition.mp4; sourceTree = "<group>"; };
+		37B052591A3EA7A200938E17 /* ISpy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ISpy.png; sourceTree = "<group>"; };
 		387F19481A37929500F1014A /* GlobalMeducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlobalMeducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387F194C1A37929500F1014A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387F194D1A37929500F1014A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,14 +157,16 @@
 				37B052571A3E9C0800938E17 /* ISpyTransition.mp4 */,
 				37B0524E1A3E94A100938E17 /* mazeComplete.png */,
 				387F19501A37929500F1014A /* AppDelegate.m */,
+				37B052591A3EA7A200938E17 /* ISpy.png */,
 				37B052471A3E8BD100938E17 /* MazeTransition.mp4 */,
 				37B052521A3E96C600938E17 /* continue.png */,
+				377618EE1A3EA8EC003711CF /* emptyScroll.png */,
 				387F19551A37929500F1014A /* Main.storyboard */,
-				37B052541A3E9ABA00938E17 /* ISpyViewController.h */,
-				37B052551A3E9ABA00938E17 /* ISpyViewController.m */,
 				37B052491A3E8CD500938E17 /* MazeViewController.h */,
 				37B0524C1A3E8FCF00938E17 /* mazeBackground.png */,
 				37B0524A1A3E8CD500938E17 /* MazeViewController.m */,
+				377618F01A3EAA8E003711CF /* StudyViewController.h */,
+				377618F11A3EAA8E003711CF /* StudyViewController.m */,
 				37B052361A3E2F4100938E17 /* LandingPageViewController.h */,
 				37B052371A3E2F4100938E17 /* LandingPageViewController.m */,
 				37B0523D1A3E6CE200938E17 /* Intro.mp4 */,
@@ -277,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B0525A1A3EA7A200938E17 /* ISpy.png in Resources */,
 				37B0523E1A3E6DB700938E17 /* Intro.mp4 in Resources */,
 				37B052581A3E9C1400938E17 /* ISpyTransition.mp4 in Resources */,
 				37B052421A3E784F00938E17 /* postVideo.png in Resources */,
@@ -287,6 +294,7 @@
 				37B052481A3E8C4E00938E17 /* MazeTransition.mp4 in Resources */,
 				387F195C1A37929500F1014A /* LaunchScreen.xib in Resources */,
 				37B052461A3E7B3400938E17 /* mazebutton.png in Resources */,
+				377618EF1A3EA8EC003711CF /* emptyScroll.png in Resources */,
 				387F19591A37929500F1014A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,9 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377618F21A3EAA8E003711CF /* StudyViewController.m in Sources */,
 				387F19511A37929500F1014A /* AppDelegate.m in Sources */,
 				37B052381A3E2F4100938E17 /* LandingPageViewController.m in Sources */,
-				37B052561A3E9ABA00938E17 /* ISpyViewController.m in Sources */,
 				387F194E1A37929500F1014A /* main.m in Sources */,
 				37B0524B1A3E8CD500938E17 /* MazeViewController.m in Sources */,
 			);

@@ -74,7 +74,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="toISpy:" destination="ZUm-Sp-q60" eventType="touchUpInside" id="jvh-zZ-bvg"/>
+                                    <action selector="toISpy:" destination="ZUm-Sp-q60" eventType="touchUpInside" id="csC-va-ZSW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,38 +91,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HY-h4-y5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479" y="398"/>
+            <point key="canvasLocation" x="2679" y="398"/>
         </scene>
-        <!--Spy View Controller-->
+        <!--Study View Controller-->
         <scene sceneID="HZa-Ju-WUn">
             <objects>
-                <viewController id="l6H-qq-zWS" customClass="ISpyViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4iZ-R0-7wk">
+                <viewController id="l6H-qq-zWS" customClass="StudyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mY1-jg-UTQ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KHJ-EG-9pX">
-                                <rect key="frame" x="537" y="340" width="46" height="30"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ISpy.png" id="lbL-PG-NJI">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aO1-ex-Vdx">
+                                <rect key="frame" x="489" y="369" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonClicked:" destination="l6H-qq-zWS" eventType="touchUpInside" id="qM6-nc-jXr"/>
+                                    <action selector="buttonClicked:" destination="l6H-qq-zWS" eventType="touchUpInside" id="ZQu-ve-b3N"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyScroll.png" id="B0T-F7-P9o">
+                                <rect key="frame" x="300" y="165" width="425" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yTe-SU-VzE">
+                                <rect key="frame" x="489" y="471" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeScroll:" destination="l6H-qq-zWS" eventType="touchUpInside" id="8h5-HM-SVo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EdN-gW-7VP">
+                                <rect key="frame" x="319" y="720" width="386" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.090196078431372548" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SPZ-WU-ytE"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="button" destination="KHJ-EG-9pX" id="08J-Pc-yJP"/>
+                        <outlet property="background" destination="lbL-PG-NJI" id="4tx-7y-xxa"/>
+                        <outlet property="button" destination="aO1-ex-Vdx" id="o7K-6g-ctN"/>
+                        <outlet property="closeScrollButton" destination="yTe-SU-VzE" id="eg5-Kg-xfZ"/>
+                        <outlet property="scroll" destination="B0T-F7-P9o" id="Ujg-FD-tgM"/>
+                        <outlet property="spyLabel" destination="EdN-gW-7VP" id="2g4-va-evF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whh-vV-Mix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3527" y="398"/>
+            <point key="canvasLocation" x="4103" y="398"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dRx-J5-DnW">
@@ -140,11 +169,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPe-vg-2Dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="398"/>
+            <point key="canvasLocation" x="-152" y="398"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ISpy.png" width="2048" height="1503"/>
         <image name="continue.png" width="438" height="108"/>
+        <image name="emptyScroll.png" width="1668" height="2210"/>
         <image name="mazeBackground.png" width="1300" height="1045"/>
         <image name="mazeComplete.png" width="1314" height="324"/>
         <image name="mazebutton.png" width="438" height="108"/>

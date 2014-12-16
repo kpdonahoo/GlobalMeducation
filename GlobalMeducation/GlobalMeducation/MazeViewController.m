@@ -9,6 +9,7 @@
 #import "MazeViewController.h"
 #import <AVFoundation/AVAudioPlayer.h>
 #import "StudyViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MazeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *mazeBackground;
@@ -25,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *tryAgain;
 @property (weak, nonatomic) IBOutlet UILabel *seconds;
 @property (weak, nonatomic) IBOutlet UIImageView *message18;
+@property (strong, nonatomic) MPMoviePlayerController *player2;
 
 
 @end
@@ -44,6 +46,7 @@
 @synthesize tryAgain;
 @synthesize seconds;
 @synthesize message18;
+@synthesize player2;
 
 CGPoint lastPoint;
 CGFloat brush;
@@ -57,6 +60,7 @@ NSTimer *myTimer;
 AVAudioPlayer *click;
 AVAudioPlayer *lost;
 AVAudioPlayer *win;
+AVAudioPlayer *maze;
 int new;
 StudyViewController *vc;
 
@@ -74,10 +78,17 @@ StudyViewController *vc;
     NSURL* musicFile3 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                 pathForResource:@"Medal"
                                                 ofType:@"wav"]];
+    
+    NSURL* musicFile4 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"GOT"
+                                                ofType:@"wav"]];
 
    click = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
    lost = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile2 error:nil];
     win = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile3 error:nil];
+    maze = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile4 error:nil];
+    
+    [maze play];
     
     
     self.navigationController.navigationBarHidden = YES;
@@ -172,7 +183,7 @@ StudyViewController *vc;
          new = 1;
          
          if (lastPoint.x >=879  && lastPoint.y >=697) {
-             
+             [maze pause];
              [win play];
              
              [UIView animateWithDuration:3.0
@@ -311,7 +322,19 @@ NSString *number = [timerLabel.text substringFromIndex: [timerLabel.text length]
 
 - (IBAction)toISpy:(id)sender {
     [win pause];
-    [self performSegueWithIdentifier:@"toISpy" sender:self];
+    
+    NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"ISpyTransition" ofType:@"mp4"];
+    NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
+    
+    player2 = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
+    [self.view addSubview:player2.view];
+    player2.fullscreen = YES;
+    player2.controlStyle = MPMovieControlStyleNone;
+    [player2 prepareToPlay];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:player2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -386,6 +409,7 @@ NSString *number = [timerLabel.text substringFromIndex: [timerLabel.text length]
                          completion:nil];
         self.mainImage.image = nil;
         new = 0;
+        [maze pause];
         [lost play];
     }
 }
@@ -410,7 +434,7 @@ NSString *number = [timerLabel.text substringFromIndex: [timerLabel.text length]
                      completion:nil];
     
     [UIView animateWithDuration:2.0
-                          delay:2.0
+                          delay:1.0
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{mazeBackground.alpha = .5;}
                      completion:nil];
@@ -431,6 +455,7 @@ NSString *number = [timerLabel.text substringFromIndex: [timerLabel.text length]
     [myTimer invalidate];
     myTimer = nil;
     [lost pause];
+    [maze play];
     counter = 20;
     timerLabel.text = @": 20";
     timerLabel.textColor = [UIColor whiteColor];
@@ -446,6 +471,11 @@ NSString *number = [timerLabel.text substringFromIndex: [timerLabel.text length]
         vc = (StudyViewController *)[segue destinationViewController];
         vc.mazeSeconds = [NSString stringWithFormat:@"%@ seconds",seconds.text];
     }
+}
+
+- (void) moviePlayBackDidFinish:(NSNotification*)notification {
+    [self performSegueWithIdentifier:@"toISpy" sender:self];
+    [player2.view removeFromSuperview];
 }
 
 /*

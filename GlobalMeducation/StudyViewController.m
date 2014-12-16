@@ -13,7 +13,6 @@
 
 @interface StudyViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *background;
-@property (strong, nonatomic) MPMoviePlayerController *player2;
 @property (weak, nonatomic) IBOutlet UIImageView *scroll;
 @property (weak, nonatomic) IBOutlet UIButton *closeScrollButton;
 @property (weak, nonatomic) IBOutlet UILabel *spyLabel;
@@ -25,7 +24,6 @@
 
 @implementation StudyViewController
 @synthesize background;
-@synthesize player2;
 @synthesize scroll;
 @synthesize closeScrollButton;
 @synthesize spyLabel;
@@ -45,49 +43,23 @@ NSTimer *timer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated {
     background.alpha = 0.0;
     scroll.alpha = 0.0;
     closeScrollButton.alpha = 0.0;
     
     NSURL* musicFile2 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"bond"
-                                               ofType:@"wav"]];
+                                                pathForResource:@"bond"
+                                                ofType:@"wav"]];
     
     spy = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile2 error:nil];
-    
-}
-
--(void) viewDidAppear:(BOOL)animated {
-    
-    if (check2 == 0) {
-    NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"ISpyTransition" ofType:@"mp4"];
-    NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
-    
-    player2 = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
-    [self.view addSubview:player2.view];
-    player2.fullscreen = YES;
-    player2.controlStyle = MPMovieControlStyleNone;
-    [player2 prepareToPlay];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlayBackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:player2];
-    check2 = 1;
-    }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-- (void) moviePlayBackDidFinish:(NSNotification*)notification {
     
     [spy play];
     
     self.view.backgroundColor = [UIColor blackColor];
-    [player2.view removeFromSuperview];
     
     background.hidden = NO;
     [UIView animateWithDuration:3.0
@@ -132,6 +104,12 @@ NSTimer *timer;
                    ^{
                        [self animateLabelShowText:@"I SPY A DINOSAUR" characterDelay:0.2];
                    });
+
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(void) update {

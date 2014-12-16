@@ -22,6 +22,7 @@
 		3715DEC71A3FF7B600207C02 /* bond.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEC61A3FF7B600207C02 /* bond.wav */; };
 		3715DEC91A4003D600207C02 /* GOT.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEC81A4003D600207C02 /* GOT.wav */; };
 		3715DECB1A400A6500207C02 /* results.png in Resources */ = {isa = PBXBuildFile; fileRef = 3715DECA1A400A6500207C02 /* results.png */; };
+		371ECA541A40130A00D945AC /* castleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 371ECA531A40130A00D945AC /* castleLogo.png */; };
 		377618EF1A3EA8EC003711CF /* emptyScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 377618EE1A3EA8EC003711CF /* emptyScroll.png */; };
 		377618F21A3EAA8E003711CF /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377618F11A3EAA8E003711CF /* StudyViewController.m */; };
 		37B052381A3E2F4100938E17 /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B052371A3E2F4100938E17 /* LandingPageViewController.m */; };
@@ -81,6 +82,7 @@
 		3715DEC61A3FF7B600207C02 /* bond.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bond.wav; sourceTree = "<group>"; };
 		3715DEC81A4003D600207C02 /* GOT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GOT.wav; sourceTree = "<group>"; };
 		3715DECA1A400A6500207C02 /* results.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = results.png; sourceTree = "<group>"; };
+		371ECA531A40130A00D945AC /* castleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = castleLogo.png; sourceTree = "<group>"; };
 		377618EE1A3EA8EC003711CF /* emptyScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyScroll.png; sourceTree = "<group>"; };
 		377618F01A3EAA8E003711CF /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyViewController.h; path = ../StudyViewController.h; sourceTree = "<group>"; };
 		377618F11A3EAA8E003711CF /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyViewController.m; path = ../StudyViewController.m; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 		37B052521A3E96C600938E17 /* continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue.png; sourceTree = "<group>"; };
 		37B052571A3E9C0800938E17 /* ISpyTransition.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ISpyTransition.mp4; sourceTree = "<group>"; };
 		37B052591A3EA7A200938E17 /* ISpy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ISpy.png; sourceTree = "<group>"; };
-		387F19481A37929500F1014A /* GlobalMeducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlobalMeducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		387F19481A37929500F1014A /* Castle Questz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Castle Questz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		387F194C1A37929500F1014A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387F194D1A37929500F1014A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		387F194F1A37929500F1014A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,7 +175,7 @@
 		387F19491A37929500F1014A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				387F19481A37929500F1014A /* GlobalMeducation.app */,
+				387F19481A37929500F1014A /* Castle Questz.app */,
 				387F19611A37929500F1014A /* GlobalMeducationTests.xctest */,
 			);
 			name = Products;
@@ -202,6 +204,7 @@
 				3715DEBC1A3FE5E400207C02 /* mazeComplete18.png */,
 				377618EE1A3EA8EC003711CF /* emptyScroll.png */,
 				3715DECA1A400A6500207C02 /* results.png */,
+				371ECA531A40130A00D945AC /* castleLogo.png */,
 				3715DEC21A3FED5700207C02 /* youreASpy.png */,
 				3715DEAB1A3F8F0A00207C02 /* Flurry.wav */,
 				387F19551A37929500F1014A /* Main.storyboard */,
@@ -267,7 +270,7 @@
 			);
 			name = GlobalMeducation;
 			productName = GlobalMeducation;
-			productReference = 387F19481A37929500F1014A /* GlobalMeducation.app */;
+			productReference = 387F19481A37929500F1014A /* Castle Questz.app */;
 			productType = "com.apple.product-type.application";
 		};
 		387F19601A37929500F1014A /* GlobalMeducationTests */ = {
@@ -340,6 +343,7 @@
 				3715DEC71A3FF7B600207C02 /* bond.wav in Resources */,
 				37B052421A3E784F00938E17 /* postVideo.png in Resources */,
 				37B052531A3E96C600938E17 /* continue.png in Resources */,
+				371ECA541A40130A00D945AC /* castleLogo.png in Resources */,
 				3715DEC11A3FEB2000207C02 /* maze1.png in Resources */,
 				37B0524D1A3E8FCF00938E17 /* mazeBackground.png in Resources */,
 				387F19571A37929500F1014A /* Main.storyboard in Resources */,
@@ -509,7 +513,7 @@
 				);
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Castle Questz";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -524,7 +528,7 @@
 				);
 				INFOPLIST_FILE = GlobalMeducation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Castle Questz";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

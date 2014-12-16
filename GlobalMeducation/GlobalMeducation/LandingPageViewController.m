@@ -8,6 +8,7 @@
 
 #import "LandingPageViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface LandingPageViewController ()
 @property (strong, nonatomic) MPMoviePlayerController *player;
@@ -19,9 +20,25 @@
 @synthesize player;
 @synthesize mazeButton;
 @synthesize postVideo;
+int check = 0;
+AVAudioPlayer *suspense;
+
 
 - (void)viewDidLoad {
     self.navigationController.navigationBarHidden = YES;
+    [super viewDidLoad];
+    NSURL* musicFile3 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"Pursuit"
+                                                ofType:@"wav"]];
+    
+    suspense = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile3 error:nil];
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    
+    if (check == 0) {
+    [self playMovie];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +47,7 @@
 }
 
 - (IBAction)enterMaze:(id)sender {
+    [suspense pause];
     NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"MazeTransition" ofType:@"mp4"];
     NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
     
@@ -44,25 +62,6 @@
                                                object:player];
 }
 
-- (IBAction)pressedStart:(id)sender {
-    NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"Intro" ofType:@"mp4"];
-    NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
-    
-    player = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
-    [self.view addSubview:player.view];
-    player.fullscreen = YES;
-    player.controlStyle = MPMovieControlStyleNone;
-    [player prepareToPlay];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlayBackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:player];
-    postVideo.hidden = NO;
-    mazeButton.alpha = 0.0;
-    mazeButton.hidden = NO;
-    
-}
-
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {
     
@@ -72,6 +71,8 @@
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{mazeButton.alpha = .85;}
                      completion:nil];
+    [suspense play];
+    
 
 }
 
@@ -80,7 +81,26 @@
     [self performSegueWithIdentifier:@"toMaze" sender:self];
     [player.view removeFromSuperview];
     
+}
+
+-(void) playMovie {
     
+    check = 1;
+    NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"Intro" ofType:@"mp4"];
+    NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
+    
+    player = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
+    [self.view addSubview:player.view];
+    player.fullscreen = YES;
+    player.controlStyle = MPMovieControlStyleNone;
+    [player prepareToPlay];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:player];
+    postVideo.hidden = NO;
+    mazeButton.alpha = 0.0;
+    mazeButton.hidden = NO;
 }
 
 /*

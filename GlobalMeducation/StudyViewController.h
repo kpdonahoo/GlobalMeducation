@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface StudyViewController : UIViewController
-
+@property (nonatomic, strong) NSString *mazeSeconds;
 @end

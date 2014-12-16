@@ -8,45 +8,80 @@
 
 #import "StudyViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVAudioPlayer.h>
+#import "ResultsViewController.h"
 
 @interface StudyViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *background;
-@property (weak, nonatomic) IBOutlet UIButton *button;
-@property (strong, nonatomic) MPMoviePlayerController *player;
+@property (strong, nonatomic) MPMoviePlayerController *player2;
 @property (weak, nonatomic) IBOutlet UIImageView *scroll;
 @property (weak, nonatomic) IBOutlet UIButton *closeScrollButton;
 @property (weak, nonatomic) IBOutlet UILabel *spyLabel;
+@property (weak, nonatomic) IBOutlet UIButton *dinosaurButton;
+@property (weak, nonatomic) IBOutlet UIButton *cookbookButton;
+@property (weak, nonatomic) IBOutlet UIButton *three;
 
 @end
 
 @implementation StudyViewController
-@synthesize button;
 @synthesize background;
-@synthesize player;
+@synthesize player2;
 @synthesize scroll;
 @synthesize closeScrollButton;
 @synthesize spyLabel;
+int check2 = 0;
+@synthesize dinosaurButton;
+@synthesize cookbookButton;
+@synthesize three;
+@synthesize mazeSeconds;
+
+AVAudioPlayer *spy;
+AVAudioPlayer *win;
+ResultsViewController *vc;
+int dinoCount = 0;
+int bookCount = 0;
+int threeCount = 0;
+
+NSTimer *timer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     background.alpha = 0.0;
     scroll.alpha = 0.0;
     closeScrollButton.alpha = 0.0;
+    
+    
+    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                               pathForResource:@"Medal"
+                                               ofType:@"wav"]];
+    
+   win = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+    
+    NSURL* musicFile2 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                               pathForResource:@"bond"
+                                               ofType:@"wav"]];
+    
+    spy = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile2 error:nil];
+    
 }
 
-- (IBAction)buttonClicked:(id)sender {
+-(void) viewDidAppear:(BOOL)animated {
+    
+    if (check2 == 0) {
     NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"ISpyTransition" ofType:@"mp4"];
     NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
     
-    player = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
-    [self.view addSubview:player.view];
-    player.fullscreen = YES;
-    player.controlStyle = MPMovieControlStyleNone;
-    [player prepareToPlay];
+    player2 = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
+    [self.view addSubview:player2.view];
+    player2.fullscreen = YES;
+    player2.controlStyle = MPMovieControlStyleNone;
+    [player2 prepareToPlay];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(moviePlayBackDidFinish:)
                                                  name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:player];
+                                               object:player2];
+    check2 = 1;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,9 +92,10 @@
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {
     
+    [spy play];
+    
     self.view.backgroundColor = [UIColor blackColor];
-    button.hidden = YES;
-    [player.view removeFromSuperview];
+    [player2.view removeFromSuperview];
     
     background.hidden = NO;
     [UIView animateWithDuration:3.0
@@ -96,8 +132,25 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),
                    ^{
+                       timer= [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                  target:self
+                                                                selector:@selector(update)
+                                                                userInfo:nil
+                                                                 repeats:YES];
                        [self animateLabelShowText:@"I SPY A DINOSAUR" characterDelay:0.2];
                    });
+}
+
+-(void) update {
+    dinoCount++;
+}
+
+-(void) update2 {
+    bookCount++;
+}
+
+-(void) update3 {
+    threeCount++;
 }
 
 - (void)animateLabelShowText:(NSString*)newText characterDelay:(NSTimeInterval)delay
@@ -115,15 +168,96 @@
     }
 }
 
+- (IBAction)dinosaurMethod:(id)sender {
+    
+    [timer invalidate];
+    timer = nil;
+    
+    [[dinosaurButton layer] setBorderWidth:2.0f];
+    [[dinosaurButton layer] setBorderColor:[UIColor redColor].CGColor];
+    
+    [UIView animateWithDuration:3.0
+                          delay:1.0
+                        options: UIViewAnimationCurveEaseInOut
+                     animations:^{ dinosaurButton.alpha = 0.0; }
+                     completion:nil];
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),
+                   ^{
+                       [self animateLabelShowText:@"I SPY A COOKBOOK" characterDelay:0.2];
+                       timer= [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                               target:self
+                                                             selector:@selector(update2)
+                                                             userInfo:nil
+                                                              repeats:YES];
+                   });
+    
+    cookbookButton.hidden = NO;
+}
+
+- (IBAction)cookbookButton:(id)sender {
+    
+    [timer invalidate];
+    timer = nil;
+    
+    [[cookbookButton layer] setBorderWidth:2.0f];
+    [[cookbookButton layer] setBorderColor:[UIColor redColor].CGColor];
+    
+    [UIView animateWithDuration:3.0
+                          delay:2.0
+                        options: UIViewAnimationCurveEaseInOut
+                     animations:^{ cookbookButton.alpha = 0.0;  }
+                     completion:nil];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),
+                   ^{
+                       [self animateLabelShowText:@"I SPY THE NUMBER THREE ON A SPINE" characterDelay:0.2];
+                       timer= [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                               target:self
+                                                             selector:@selector(update3)
+                                                             userInfo:nil
+                                                              repeats:YES];
+                   });
+}
+
+- (IBAction)threeButton:(id)sender {
+    [[three layer] setBorderWidth:2.0f];
+    [[three layer] setBorderColor:[UIColor redColor].CGColor];
+    
+    [UIView animateWithDuration:3.0
+                          delay:2.0
+                        options: UIViewAnimationCurveEaseInOut
+                     animations:^{ cookbookButton.alpha = 0.0;  }
+                     completion:nil];
+    
+    [win play];
+    
+    [UIView animateWithDuration:3.0
+                          delay:4.0
+                        options: UIViewAnimationCurveEaseInOut
+                     animations:^{ cookbookButton.alpha = 0.0;}
+                     completion:nil];
+    
+    double delayInSeconds = 2;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self performSegueWithIdentifier:@"toResults" sender:self];
+    });
+
+    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"toResults"])
+    {
+        vc = (ResultsViewController *)[segue destinationViewController];
+        vc.mazeSecondz = mazeSeconds;
+    }
+}
+
+-(void) viewDidDisappear:(BOOL)animated {
+    [spy pause];
+}
+
 
 @end

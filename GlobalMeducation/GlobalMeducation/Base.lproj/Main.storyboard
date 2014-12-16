@@ -12,16 +12,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Jg-xv-06w">
-                                <rect key="frame" x="489" y="269" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="START">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUJ-6R-7qs"/>
-                                </connections>
-                            </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postVideo.png" id="sAv-f0-BAl">
                                 <rect key="frame" x="0.0" y="0.0" width="1033" height="773"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -67,6 +57,10 @@
                                 <rect key="frame" x="-28" y="237" width="1080" height="294"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mazeComplete18.png" id="igz-fA-xYO">
+                                <rect key="frame" x="330" y="237" width="367" height="294"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lz9-va-STY">
                                 <rect key="frame" x="397" y="430" width="230" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,21 +71,99 @@
                                     <action selector="toISpy:" destination="ZUm-Sp-q60" eventType="touchUpInside" id="csC-va-ZSW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mazeScroll.png" id="1Ht-Zf-4vj">
+                                <rect key="frame" x="320" y="168" width="390" height="422"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tn9-Cn-k9m">
+                                <rect key="frame" x="460" y="483" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="17"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.090196078430000007" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeScroll:" destination="ZUm-Sp-q60" eventType="touchUpInside" id="INx-9D-uTl"/>
+                                    <action selector="closeScroll:" destination="l6H-qq-zWS" eventType="touchUpInside" id="X9e-hw-DwA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maze1.png" id="Wjv-bT-eJI">
+                                <rect key="frame" x="5" y="0.0" width="1019" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9sF-sm-MyT">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Wuv-ac-i8V">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lki-LL-cZE">
+                                <rect key="frame" x="74" y="45" width="128" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="resetButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="ZUm-Sp-q60" eventType="touchUpInside" id="vMi-va-Asr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p8A-NC-8dI">
+                                <rect key="frame" x="863" y="40" width="100" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="41"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeRanOut.png" id="P9q-Np-VSA">
+                                <rect key="frame" x="348" y="225" width="332" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wW3-Xr-R1F">
+                                <rect key="frame" x="389" y="532" width="246" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tryAgain.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryAgain:" destination="ZUm-Sp-q60" eventType="touchUpInside" id="5wU-ZC-uhj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JdZ-vT-BlS">
+                                <rect key="frame" x="486" y="382" width="50" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="28"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="CCc-kx-xBA"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="closeScrollButton" destination="tn9-Cn-k9m" id="lkS-ER-J0D"/>
                         <outlet property="continueButton" destination="Lz9-va-STY" id="hmt-ba-TCp"/>
+                        <outlet property="lostMessage" destination="P9q-Np-VSA" id="gzQ-Ij-Yay"/>
+                        <outlet property="mainImage" destination="Wuv-ac-i8V" id="kvb-Nk-7Ek"/>
                         <outlet property="mazeBackground" destination="zzD-a4-Dbu" id="4NY-YZ-34b"/>
+                        <outlet property="mazeOne" destination="Wjv-bT-eJI" id="dK5-xn-uDe"/>
                         <outlet property="message" destination="QDL-dd-RIN" id="mud-i8-kG1"/>
+                        <outlet property="message18" destination="igz-fA-xYO" id="p9c-dY-k3h"/>
+                        <outlet property="resetButton" destination="Lki-LL-cZE" id="ttZ-64-joR"/>
+                        <outlet property="scroll" destination="1Ht-Zf-4vj" id="T0B-PM-3UE"/>
+                        <outlet property="seconds" destination="JdZ-vT-BlS" id="23e-HC-IXs"/>
+                        <outlet property="tempDrawImage" destination="9sF-sm-MyT" id="7Rn-ln-K2z"/>
+                        <outlet property="timerLabel" destination="p8A-NC-8dI" id="Udw-xM-Dy3"/>
+                        <outlet property="tryAgain" destination="wW3-Xr-R1F" id="90d-WD-1L8"/>
                         <segue destination="l6H-qq-zWS" kind="push" identifier="toISpy" id="vGj-me-hda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HY-h4-y5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679" y="398"/>
+            <point key="canvasLocation" x="2676" y="398"/>
         </scene>
         <!--Study View Controller-->
         <scene sceneID="HZa-Ju-WUn">
@@ -105,30 +177,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aO1-ex-Vdx">
-                                <rect key="frame" x="489" y="369" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonClicked:" destination="l6H-qq-zWS" eventType="touchUpInside" id="ZQu-ve-b3N"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyScroll.png" id="B0T-F7-P9o">
-                                <rect key="frame" x="300" y="165" width="425" height="413"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youreASpy.png" id="B0T-F7-P9o">
+                                <rect key="frame" x="300" y="165" width="390" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yTe-SU-VzE">
-                                <rect key="frame" x="489" y="471" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeScroll:" destination="l6H-qq-zWS" eventType="touchUpInside" id="8h5-HM-SVo"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EdN-gW-7VP">
                                 <rect key="frame" x="319" y="720" width="386" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,22 +188,128 @@
                                 <color key="textColor" red="0.14117647058823529" green="0.090196078431372548" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jJ6-xS-kiz">
+                                <rect key="frame" x="221" y="413" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dinosaurMethod:" destination="l6H-qq-zWS" eventType="touchUpInside" id="doc-ai-B7U"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E99-wL-jMn">
+                                <rect key="frame" x="269" y="472" width="87" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cookbookButton:" destination="l6H-qq-zWS" eventType="touchUpInside" id="vcb-Z1-Rf8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xfK-NB-gG5">
+                                <rect key="frame" x="802" y="394" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="threeButton:" destination="l6H-qq-zWS" eventType="touchUpInside" id="lee-fV-xvT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yTe-SU-VzE">
+                                <rect key="frame" x="443" y="484" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="17"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.090196078430000007" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeScroll:" destination="l6H-qq-zWS" eventType="touchUpInside" id="8h5-HM-SVo"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="SPZ-WU-ytE"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="background" destination="lbL-PG-NJI" id="4tx-7y-xxa"/>
-                        <outlet property="button" destination="aO1-ex-Vdx" id="o7K-6g-ctN"/>
                         <outlet property="closeScrollButton" destination="yTe-SU-VzE" id="eg5-Kg-xfZ"/>
+                        <outlet property="cookbookButton" destination="E99-wL-jMn" id="wzZ-VW-vkk"/>
+                        <outlet property="dinosaurButton" destination="jJ6-xS-kiz" id="9sc-wr-h1i"/>
                         <outlet property="scroll" destination="B0T-F7-P9o" id="Ujg-FD-tgM"/>
                         <outlet property="spyLabel" destination="EdN-gW-7VP" id="2g4-va-evF"/>
+                        <outlet property="three" destination="xfK-NB-gG5" id="ZvM-ma-Gah"/>
+                        <segue destination="aaT-CP-1DV" kind="push" identifier="toResults" id="2w4-XJ-fMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whh-vV-Mix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4103" y="398"/>
+            <point key="canvasLocation" x="3891" y="398"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="ZBl-ab-LjI">
+            <objects>
+                <viewController id="aaT-CP-1DV" customClass="ResultsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UcQ-II-bX6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mazeBackground.png" id="1fn-Zd-DnI">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="results.png" id="Bze-z5-un7">
+                                <rect key="frame" x="280" y="132" width="465" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dIQ-Zq-DCG">
+                                <rect key="frame" x="513" y="429" width="145" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.090196078430000007" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Zm-ct-gRR">
+                                <rect key="frame" x="513" y="345" width="145" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.090196078430000007" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2t9-FZ-tCM">
+                                <rect key="frame" x="512" y="387" width="145" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.090196078430000007" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R6b-2P-GLI">
+                                <rect key="frame" x="513" y="303" width="145" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="27"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.090196078430000007" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0zv-By-NpY"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="background" destination="Bze-z5-un7" id="8Es-bF-RFA"/>
+                        <outlet property="bookSeconds" destination="2t9-FZ-tCM" id="aqq-Jl-j29"/>
+                        <outlet property="dinosaurSeconds" destination="7Zm-ct-gRR" id="Wrm-x1-WUE"/>
+                        <outlet property="mazeSeconds" destination="R6b-2P-GLI" id="CTL-Vb-65t"/>
+                        <outlet property="threeSeconds" destination="dIQ-Zq-DCG" id="jHb-wH-Mna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pe-MH-MRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5011" y="398"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dRx-J5-DnW">
@@ -175,11 +333,18 @@
     <resources>
         <image name="ISpy.png" width="2048" height="1503"/>
         <image name="continue.png" width="438" height="108"/>
-        <image name="emptyScroll.png" width="1668" height="2210"/>
+        <image name="maze1.png" width="1300" height="1045"/>
         <image name="mazeBackground.png" width="1300" height="1045"/>
         <image name="mazeComplete.png" width="1314" height="324"/>
+        <image name="mazeComplete18.png" width="440" height="324"/>
+        <image name="mazeScroll.png" width="1668" height="2210"/>
         <image name="mazebutton.png" width="438" height="108"/>
         <image name="postVideo.png" width="2048" height="1536"/>
+        <image name="resetButton.png" width="205" height="87"/>
+        <image name="results.png" width="1668" height="2210"/>
+        <image name="timeRanOut.png" width="444" height="403"/>
+        <image name="tryAgain.png" width="438" height="108"/>
+        <image name="youreASpy.png" width="1668" height="2210"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

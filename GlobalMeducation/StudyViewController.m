@@ -36,7 +36,6 @@ int check2 = 0;
 @synthesize mazeSeconds;
 
 AVAudioPlayer *spy;
-AVAudioPlayer *win;
 ResultsViewController *vc;
 int dinoCount = 0;
 int bookCount = 0;
@@ -49,13 +48,6 @@ NSTimer *timer;
     background.alpha = 0.0;
     scroll.alpha = 0.0;
     closeScrollButton.alpha = 0.0;
-    
-    
-    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Medal"
-                                               ofType:@"wav"]];
-    
-   win = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
     
     NSURL* musicFile2 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                pathForResource:@"bond"
@@ -105,7 +97,7 @@ NSTimer *timer;
                      completion:nil];
     
     [UIView animateWithDuration:3.0
-                          delay:3.0
+                          delay:1.0
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{scroll.alpha = .8;}
                      completion:nil];
@@ -130,13 +122,14 @@ NSTimer *timer;
                      animations:^{closeScrollButton.alpha = 0.0;}
                      completion:nil];
     
+    timer= [NSTimer scheduledTimerWithTimeInterval:1.0
+                                            target:self
+                                          selector:@selector(update)
+                                          userInfo:nil
+                                           repeats:YES];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),
                    ^{
-                       timer= [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                                  target:self
-                                                                selector:@selector(update)
-                                                                userInfo:nil
-                                                                 repeats:YES];
                        [self animateLabelShowText:@"I SPY A DINOSAUR" characterDelay:0.2];
                    });
 }
@@ -182,14 +175,15 @@ NSTimer *timer;
                      animations:^{ dinosaurButton.alpha = 0.0; }
                      completion:nil];
 
+    timer= [NSTimer scheduledTimerWithTimeInterval:1.0
+                                            target:self
+                                          selector:@selector(update2)
+                                          userInfo:nil
+                                           repeats:YES];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),
                    ^{
                        [self animateLabelShowText:@"I SPY A COOKBOOK" characterDelay:0.2];
-                       timer= [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                               target:self
-                                                             selector:@selector(update2)
-                                                             userInfo:nil
-                                                              repeats:YES];
                    });
     
     cookbookButton.hidden = NO;
@@ -209,14 +203,15 @@ NSTimer *timer;
                      animations:^{ cookbookButton.alpha = 0.0;  }
                      completion:nil];
     
+    timer= [NSTimer scheduledTimerWithTimeInterval:1.0
+                                            target:self
+                                          selector:@selector(update3)
+                                          userInfo:nil
+                                           repeats:YES];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),
                    ^{
                        [self animateLabelShowText:@"I SPY THE NUMBER THREE ON A SPINE" characterDelay:0.2];
-                       timer= [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                               target:self
-                                                             selector:@selector(update3)
-                                                             userInfo:nil
-                                                              repeats:YES];
                    });
 }
 
@@ -229,8 +224,6 @@ NSTimer *timer;
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{ cookbookButton.alpha = 0.0;  }
                      completion:nil];
-    
-    [win play];
     
     [UIView animateWithDuration:3.0
                           delay:4.0
@@ -252,6 +245,9 @@ NSTimer *timer;
     {
         vc = (ResultsViewController *)[segue destinationViewController];
         vc.mazeSecondz = mazeSeconds;
+        vc.bookSecondz = [NSString stringWithFormat:@"%i seconds",bookCount];
+        vc.dinoSecondz = [NSString stringWithFormat:@"%i seconds",dinoCount];
+        vc.threeSecondz = [NSString stringWithFormat:@"%i seconds",threeCount];
     }
 }
 

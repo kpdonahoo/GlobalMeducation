@@ -10,7 +10,7 @@
 
 @interface ResultsViewController : UIViewController
 @property (nonatomic, strong) NSString *mazeSecondz;
-@property (nonatomic, strong) NSString *dinoSeconds;
-@property (nonatomic, strong) NSString *bookSeconds;
-@property (nonatomic, strong) NSString *threeSeconds;
+@property (nonatomic, strong) NSString *dinoSecondz;
+@property (nonatomic, strong) NSString *bookSecondz;
+@property (nonatomic, strong) NSString *threeSecondz;
 @end

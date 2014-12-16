@@ -25,7 +25,10 @@
 @synthesize bookSeconds;
 @synthesize threeSeconds;
 @synthesize mazeSecondz;
-@synthesize bookSeconds;
+@synthesize bookSecondz;
+@synthesize dinoSecondz;
+@synthesize threeSecondz;
+AVAudioPlayer *win;
 
 
 - (void)viewDidLoad {
@@ -39,6 +42,17 @@
     threeSeconds.alpha = 0.0;
     
     mazeSeconds.text = mazeSecondz;
+    dinosaurSeconds.text = dinoSecondz;
+    bookSeconds.text = bookSecondz;
+    threeSeconds.text = threeSecondz;
+    
+    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                               pathForResource:@"Medal"
+                                               ofType:@"wav"]];
+    
+    win = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+    
+    [win play];
     
     [UIView animateWithDuration:3.0
                           delay:0.0

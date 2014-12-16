@@ -19,9 +19,9 @@
 		3715DEBF1A3FEA1B00207C02 /* mazeScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEBE1A3FEA1B00207C02 /* mazeScroll.png */; };
 		3715DEC11A3FEB2000207C02 /* maze1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEC01A3FEB2000207C02 /* maze1.png */; };
 		3715DEC31A3FED5700207C02 /* youreASpy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEC21A3FED5700207C02 /* youreASpy.png */; };
-		3715DEC51A3FF0B500207C02 /* results.png in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEC41A3FF0B500207C02 /* results.png */; };
 		3715DEC71A3FF7B600207C02 /* bond.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEC61A3FF7B600207C02 /* bond.wav */; };
 		3715DEC91A4003D600207C02 /* GOT.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3715DEC81A4003D600207C02 /* GOT.wav */; };
+		3715DECB1A400A6500207C02 /* results.png in Resources */ = {isa = PBXBuildFile; fileRef = 3715DECA1A400A6500207C02 /* results.png */; };
 		377618EF1A3EA8EC003711CF /* emptyScroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 377618EE1A3EA8EC003711CF /* emptyScroll.png */; };
 		377618F21A3EAA8E003711CF /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 377618F11A3EAA8E003711CF /* StudyViewController.m */; };
 		37B052381A3E2F4100938E17 /* LandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B052371A3E2F4100938E17 /* LandingPageViewController.m */; };
@@ -78,9 +78,9 @@
 		3715DEBE1A3FEA1B00207C02 /* mazeScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mazeScroll.png; sourceTree = "<group>"; };
 		3715DEC01A3FEB2000207C02 /* maze1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maze1.png; sourceTree = "<group>"; };
 		3715DEC21A3FED5700207C02 /* youreASpy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youreASpy.png; sourceTree = "<group>"; };
-		3715DEC41A3FF0B500207C02 /* results.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = results.png; sourceTree = "<group>"; };
 		3715DEC61A3FF7B600207C02 /* bond.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bond.wav; sourceTree = "<group>"; };
 		3715DEC81A4003D600207C02 /* GOT.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GOT.wav; sourceTree = "<group>"; };
+		3715DECA1A400A6500207C02 /* results.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = results.png; sourceTree = "<group>"; };
 		377618EE1A3EA8EC003711CF /* emptyScroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyScroll.png; sourceTree = "<group>"; };
 		377618F01A3EAA8E003711CF /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyViewController.h; path = ../StudyViewController.h; sourceTree = "<group>"; };
 		377618F11A3EAA8E003711CF /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyViewController.m; path = ../StudyViewController.m; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 				3715DEB31A3F9D1900207C02 /* Medal.wav */,
 				3715DEA91A3F865000207C02 /* beep.wav */,
 				3715DEB11A3F92F500207C02 /* tryAgain.png */,
-				3715DEC41A3FF0B500207C02 /* results.png */,
 				37B052471A3E8BD100938E17 /* MazeTransition.mp4 */,
 				37B052521A3E96C600938E17 /* continue.png */,
 				3715DEB51A3FB37200207C02 /* Pursuit.wav */,
@@ -202,6 +201,7 @@
 				3715DEBE1A3FEA1B00207C02 /* mazeScroll.png */,
 				3715DEBC1A3FE5E400207C02 /* mazeComplete18.png */,
 				377618EE1A3EA8EC003711CF /* emptyScroll.png */,
+				3715DECA1A400A6500207C02 /* results.png */,
 				3715DEC21A3FED5700207C02 /* youreASpy.png */,
 				3715DEAB1A3F8F0A00207C02 /* Flurry.wav */,
 				387F19551A37929500F1014A /* Main.storyboard */,
@@ -338,7 +338,6 @@
 				3715DEAC1A3F8F0A00207C02 /* Flurry.wav in Resources */,
 				37B052581A3E9C1400938E17 /* ISpyTransition.mp4 in Resources */,
 				3715DEC71A3FF7B600207C02 /* bond.wav in Resources */,
-				3715DEC51A3FF0B500207C02 /* results.png in Resources */,
 				37B052421A3E784F00938E17 /* postVideo.png in Resources */,
 				37B052531A3E96C600938E17 /* continue.png in Resources */,
 				3715DEC11A3FEB2000207C02 /* maze1.png in Resources */,
@@ -347,6 +346,7 @@
 				37B0524F1A3E94A100938E17 /* mazeComplete.png in Resources */,
 				3715DEC91A4003D600207C02 /* GOT.wav in Resources */,
 				3715DEBF1A3FEA1B00207C02 /* mazeScroll.png in Resources */,
+				3715DECB1A400A6500207C02 /* results.png in Resources */,
 				37B052481A3E8C4E00938E17 /* MazeTransition.mp4 in Resources */,
 				387F195C1A37929500F1014A /* LaunchScreen.xib in Resources */,
 				3715DEA81A3F5C6600207C02 /* resetButton.png in Resources */,

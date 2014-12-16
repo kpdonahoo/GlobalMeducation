@@ -69,13 +69,13 @@ NSTimer *timer;
                      completion:nil];
     
     [UIView animateWithDuration:3.0
-                          delay:1.0
+                          delay:2.0
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{scroll.alpha = .8;}
                      completion:nil];
     
     [UIView animateWithDuration:3.0
-                          delay:3.0
+                          delay:2.0
                         options: UIViewAnimationCurveEaseInOut
                      animations:^{closeScrollButton.alpha = 1.0;}
                      completion:nil];
